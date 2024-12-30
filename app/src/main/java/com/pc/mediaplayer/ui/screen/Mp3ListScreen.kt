@@ -77,6 +77,7 @@ fun Mp3ListScreen(navController: NavController, mp3ViewModel: Mp3ViewModel) {
 fun Mp3Item(navController: NavController, mp3: Mp3FileData, mp3ViewModel: Mp3ViewModel) {
     Box(modifier = Modifier.clickable {
         mp3ViewModel.selectItem(mp3)
+        navController.navigate(Routes.MP3_DETAIL)
     }) {
         Row(
             modifier = Modifier
